@@ -22,13 +22,15 @@ To address these challenges, PlantCCC integrates **Spatial Transcriptomics (ST)*
 
 ## 🏗️ The Overall Framework
 
-PlantCCC consists of three main modules:
-1.  **Data Preprocessing**: Denoising and gene expression enhancement tailored for spatial data.
-2.  **Graph Construction & Learning**: Constructing spatial-ligand-receptor heterogeneous graphs and training with GAT-DGI.
-3.  **Inference & Visualization**: Decoding attention weights to infer significant CCC events.
+The PlantCCC framework is composed of four integral modules, as illustrated below:
+
+*   **(A) Data Preprocessing & Enhancement**: Preprocessing of spatial transcriptomics inputs and targeted gene expression enhancement to mitigate data sparsity.
+*   **(B) Heterogeneous Graph Construction**: Construction of candidate communication heterogeneous graphs integrating spatial coordinates and ligand-receptor pairs.
+*   **(C) Spatially-aware GAT & Contrastive Learning**: Learning spatial synergistic features using Spatially-aware Graph Attention Networks (GAT) coupled with contrastive learning strategies.
+*   **(D) Scoring & Aggregation**: Calculation of communication scores based on attention weights and aggregation of high-confidence results.
 
 ![Overall Framework](figures/framework.jpg)
-*(Fig 1. The workflow of PlantCCC model. It integrates spatial information and gene expression to infer cell-cell communication.)*
+*(Fig 1. Overview of the PlantCCC workflow.)*
 
 ---
 
