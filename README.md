@@ -27,7 +27,7 @@ PlantCCC consists of three main modules:
 2.  **Graph Construction & Learning**: Constructing spatial-ligand-receptor heterogeneous graphs and training with GAT-DGI.
 3.  **Inference & Visualization**: Decoding attention weights to infer significant CCC events.
 
-![Overall Framework](figures/framework.png)
+![Overall Framework](figures/framework.jpg)
 *(Fig 1. The workflow of PlantCCC model. It integrates spatial information and gene expression to infer cell-cell communication.)*
 
 ---
