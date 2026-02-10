@@ -1,25 +1,49 @@
 # PlantCCC: A Spatial-aware Graph Deep Learning Framework for Plant Cell-Cell Communication
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Framework-PyTorch%20%7C%20DGL-red)](https://pytorch.org/)
+[![PyTorch](https://img.shields.io/badge/Framework-PyTorch-red)](https://pytorch.org/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## 📖 简介 (Introduction)
+## 📝 Introduction
 
-**PlantCCC** 是一个融合空间转录组信息和图深度学习（Graph Deep Learning）的植物细胞通讯分析工具。
+**PlantCCC** is a novel deep learning framework designed to infer **spatially-resolved cell-cell communication (CCC)** in plants.
 
-传统的植物细胞通讯推断方法主要依赖配体-受体共表达，忽略了细胞间的**空间邻近关系 (Spatial Proximity)**。PlantCCC 通过构建空间邻接图，结合 **多头图注意力网络 (GAT)** 和 **深度图信息最大化 (DGI)** 策略，能够从噪声充斥的候选集中识别出具有显著空间共定位趋势的高置信度通讯对。
+Cell-cell communication is a core mechanism in plant development and environmental response. However, existing databases often rely on unverified candidates, and traditional inference methods based solely on co-expression ignore the crucial **spatial proximity** of cells.
 
-主要特性：
-- **空间感知**：将空间位置信息显式编码进细胞通讯推断。
-- **降噪增强**：针对植物空间转录组数据的定制化表达增强。
-- **高可信度**：利用 Attention Score 作为互作可信度指标。
-- **动态分析**：支持发育时序数据的通讯动态重编程分析。
+To address these challenges, PlantCCC integrates **Spatial Transcriptomics (ST)** data with **Graph Deep Learning**. By constructing a heterogeneous graph that combines spatial adjacency with ligand-receptor co-expression, PlantCCC utilizes a **Multi-head Graph Attention Network (GAT)** and **Deep Graph Information Maximization (DGI)** to learn spatial synergistic features.
 
-## 🛠️ 环境依赖 (Requirements)
+### Key Features
+*   **Spatial-Awareness**: Explicitly encodes spatial proximity into the communication inference process.
+*   **Denoising & Enhancement**: Customized expression enhancement tailored for plant ST data.
+*   **High Confidence**: Uses attention scores as a metric for interaction reliability to filter false positives.
+*   **Dynamic Analysis**: Capable of revealing dynamic reprogramming of CCC across developmental stages (e.g., Poplar stem secondary growth).
 
-建议使用 Anaconda 创建环境：
+---
+
+## 🏗️ The Overall Framework
+
+PlantCCC consists of three main modules:
+1.  **Data Preprocessing**: Denoising and gene expression enhancement tailored for spatial data.
+2.  **Graph Construction & Learning**: Constructing spatial-ligand-receptor heterogeneous graphs and training with GAT-DGI.
+3.  **Inference & Visualization**: Decoding attention weights to infer significant CCC events.
+
+![Overall Framework](figures/framework.png)
+*(Fig 1. The workflow of PlantCCC model. It integrates spatial information and gene expression to infer cell-cell communication.)*
+
+---
+
+## 🛠️ System Requirements
+
+### Hardware
+*   **GPU**: NVIDIA GPU with CUDA support (Recommended for GAT training).
+*   **RAM**: 16GB or higher.
+
+### Software
+*   **OS**: Linux (Ubuntu 18.04+) or Windows 10/11.
+*   **Python**: 3.8 or higher.
+
+### Dependencies
+Please install the required Python packages using the following command:
 
 ```bash
-conda create -n plantccc python=3.9
-conda activate plantccc
 pip install -r requirements.txt
