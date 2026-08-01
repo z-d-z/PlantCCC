@@ -1,0 +1,16 @@
+ligand,ligand_agi,receptor,receptor_agi,ligand_tissue,receptor_tissue,sigma_hops,gamma2_true,label,communication,role,alpha2,beta2,real_mean_ligand,real_dropout_ligand,real_mean_receptor,real_dropout_receptor,target_mean_ligand,target_mean_receptor
+EPFL9,AT4G12970,ER,AT2G26330,Palisade_mesophyll_cell,Upper_epidermal_cell,3.0,0.4,mesophyll_to_epidermis_medium,True,true_lr,0.3,0.2,0.0030075188,0.9969924812030075,0.02406015,0.9819548872180451,0.7,0.7
+CLE41,AT3G24770,PXY,AT5G61480,Vascular_cell,Vascular_cell,1.0,0.45,vascular_intra_short,True,true_lr,0.3,0.2,0.0030075188,0.9984962406015038,0.0,1.0,0.7,0.7
+CLE9,AT1G26600,BAM1,AT5G65700,Guard_cell,Upper_epidermal_cell,2.0,0.35,guard_to_epidermis_short,True,true_lr,0.3,0.2,0.0030075188,0.9984962406015038,0.016541352,0.9849624060150376,0.7,0.7
+CIF2,AT4G34600,SGN3,AT4G20140,Vascular_cell,Vascular_cell,2.0,0.4,vascular_intra_medium,True,true_lr,0.3,0.2,0.007518797,0.9939849624060151,0.0030075188,0.9984962406015038,0.7,0.7
+PSK4,AT3G49780,PSKR1,AT2G02220,Spongy_mesophyll_cell,Lower_epidermal_cell,5.0,0.3,long_range_systemic,True,true_lr,0.3,0.2,0.1037594,0.9413533834586466,0.054135337,0.9654135338345865,0.7,0.7
+CONF_UE1_lig,AT1G66100,CONF_UE1_rec,AT2G38540,Upper_epidermal_cell,Upper_epidermal_cell,,0.0,colocalization_confounder,False,confounder,0.55,0.2,0.6706767,0.7774436090225564,0.5263158,0.8075187969924812,0.7,0.7
+CONF_SM1_lig,AT1G20620,CONF_SM1_rec,AT4G19420,Spongy_mesophyll_cell,Spongy_mesophyll_cell,,0.0,colocalization_confounder,False,confounder,0.55,0.2,0.46766916,0.8030075187969925,0.33533835,0.8195488721804511,0.7,0.7
+CONF_LE1_lig,AT1G68530,CONF_LE1_rec,AT2G28630,Lower_epidermal_cell,Lower_epidermal_cell,,0.0,colocalization_confounder,False,confounder,0.55,0.2,0.25714287,0.837593984962406,0.437594,0.8180451127819549,0.7,0.7
+CONF_GC1_lig,AT5G25220,CONF_GC1_rec,AT3G61690,Guard_cell,Guard_cell,,0.0,colocalization_confounder,False,confounder,0.55,0.2,0.02406015,0.9819548872180451,0.015037594,0.98796992481203,0.7,0.7
+CONF_X1_lig,AT1G09310,CONF_X1_rec,AT3G16370,Upper_epidermal_cell,Upper_epidermal_cell,,0.0,colocalization_confounder,False,confounder,0.55,0.2,0.6887218,0.7338345864661654,0.1924812,0.9007518796992481,0.7,0.7
+RAND1_lig,AT3G46970,RAND1_rec,AT4G33920,random,random,,0.0,uniform_random,False,random,,,0.16240601,0.9052631578947369,0.082706764,0.9503759398496241,0.7,0.7
+RAND2_lig,AT3G15210,RAND2_rec,AT1G29920,random,random,,0.0,uniform_random,False,random,,,0.057142857,0.9578947368421052,7.243609,0.20451127819548873,0.7,7.2436089515686035
+RAND3_lig,AT1G51500,RAND3_rec,AT1G65490,random,random,,0.0,uniform_random,False,random,,,0.1443609,0.9142857142857143,0.41654137,0.7654135338345864,0.7,0.7
+RAND4_lig,ATCG00020,RAND4_rec,AT4G27870,random,random,,0.0,uniform_random,False,random,,,59.5594,0.05714285714285714,0.007518797,0.9924812030075187,59.55939865112305,0.7
+RAND5_lig,ATCG00490,RAND5_rec,AT3G41768,random,random,,0.0,uniform_random,False,random,,,16.765413,0.11729323308270677,205.73834,0.0030075187969924814,16.765413284301758,205.73834228515625

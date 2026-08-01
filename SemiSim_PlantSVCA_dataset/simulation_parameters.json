@@ -1,0 +1,164 @@
+{
+  "seed": 20260513,
+  "source_dataset": "1778609833877_S2-6_stereoseq.h5ad",
+  "n_cells": 665,
+  "n_genes_total": 18266,
+  "n_genes_overwritten": 30,
+  "cell_types": [
+    "Guard_cell",
+    "Lower_epidermal_cell",
+    "Palisade_mesophyll_cell",
+    "Spongy_mesophyll_cell",
+    "Upper_epidermal_cell",
+    "Vascular_cell"
+  ],
+  "neighbor_graph": {
+    "method": "Delaunay + length cutoff + tissue-boundary penalty",
+    "edge_cutoff_units": 103.12251600844667,
+    "boundary_penalty": 0.6,
+    "median_nn_distance": 41.249006403378665,
+    "n_edges": 1536,
+    "mean_degree": 3.8796992481203008
+  },
+  "svca_decomposition": {
+    "formula": "y = alpha*X_intrinsic + beta*X_env + gamma*(K_sigma L) + epsilon",
+    "alpha2_target": 0.3,
+    "beta2_target": 0.2,
+    "noise_sd_on_z_scale": 0.25,
+    "kernel": "rownorm(sum_{h=1..sigma} 0.55^h * P^h) on plant graph"
+  },
+  "count_model": "Poisson(target_mean * exp(0.7*z)/mean * libsize/median_libsize)",
+  "pairs": {
+    "true_lr_pairs": [
+      {
+        "ligand": "EPFL9",
+        "ligand_agi": "AT4G12970",
+        "receptor": "ER",
+        "receptor_agi": "AT2G26330",
+        "ligand_tissue": "Palisade_mesophyll_cell",
+        "receptor_tissue": "Upper_epidermal_cell",
+        "sigma_hops": 3,
+        "gamma2": 0.4,
+        "label": "mesophyll_to_epidermis_medium"
+      },
+      {
+        "ligand": "CLE41",
+        "ligand_agi": "AT3G24770",
+        "receptor": "PXY",
+        "receptor_agi": "AT5G61480",
+        "ligand_tissue": "Vascular_cell",
+        "receptor_tissue": "Vascular_cell",
+        "sigma_hops": 1,
+        "gamma2": 0.45,
+        "label": "vascular_intra_short"
+      },
+      {
+        "ligand": "CLE9",
+        "ligand_agi": "AT1G26600",
+        "receptor": "BAM1",
+        "receptor_agi": "AT5G65700",
+        "ligand_tissue": "Guard_cell",
+        "receptor_tissue": "Upper_epidermal_cell",
+        "sigma_hops": 2,
+        "gamma2": 0.35,
+        "label": "guard_to_epidermis_short"
+      },
+      {
+        "ligand": "CIF2",
+        "ligand_agi": "AT4G34600",
+        "receptor": "SGN3",
+        "receptor_agi": "AT4G20140",
+        "ligand_tissue": "Vascular_cell",
+        "receptor_tissue": "Vascular_cell",
+        "sigma_hops": 2,
+        "gamma2": 0.4,
+        "label": "vascular_intra_medium"
+      },
+      {
+        "ligand": "PSK4",
+        "ligand_agi": "AT3G49780",
+        "receptor": "PSKR1",
+        "receptor_agi": "AT2G02220",
+        "ligand_tissue": "Spongy_mesophyll_cell",
+        "receptor_tissue": "Lower_epidermal_cell",
+        "sigma_hops": 5,
+        "gamma2": 0.3,
+        "label": "long_range_systemic"
+      }
+    ],
+    "confounder_pairs": [
+      {
+        "ligand": "CONF_UE1_lig",
+        "ligand_agi": "AT1G66100",
+        "receptor": "CONF_UE1_rec",
+        "receptor_agi": "AT2G38540",
+        "ligand_tissue": "Upper_epidermal_cell",
+        "receptor_tissue": "Upper_epidermal_cell"
+      },
+      {
+        "ligand": "CONF_SM1_lig",
+        "ligand_agi": "AT1G20620",
+        "receptor": "CONF_SM1_rec",
+        "receptor_agi": "AT4G19420",
+        "ligand_tissue": "Spongy_mesophyll_cell",
+        "receptor_tissue": "Spongy_mesophyll_cell"
+      },
+      {
+        "ligand": "CONF_LE1_lig",
+        "ligand_agi": "AT1G68530",
+        "receptor": "CONF_LE1_rec",
+        "receptor_agi": "AT2G28630",
+        "ligand_tissue": "Lower_epidermal_cell",
+        "receptor_tissue": "Lower_epidermal_cell"
+      },
+      {
+        "ligand": "CONF_GC1_lig",
+        "ligand_agi": "AT5G25220",
+        "receptor": "CONF_GC1_rec",
+        "receptor_agi": "AT3G61690",
+        "ligand_tissue": "Guard_cell",
+        "receptor_tissue": "Guard_cell"
+      },
+      {
+        "ligand": "CONF_X1_lig",
+        "ligand_agi": "AT1G09310",
+        "receptor": "CONF_X1_rec",
+        "receptor_agi": "AT3G16370",
+        "ligand_tissue": "Upper_epidermal_cell",
+        "receptor_tissue": "Upper_epidermal_cell"
+      }
+    ],
+    "random_pairs": [
+      {
+        "ligand": "RAND1_lig",
+        "ligand_agi": "AT3G46970",
+        "receptor": "RAND1_rec",
+        "receptor_agi": "AT4G33920"
+      },
+      {
+        "ligand": "RAND2_lig",
+        "ligand_agi": "AT3G15210",
+        "receptor": "RAND2_rec",
+        "receptor_agi": "AT1G29920"
+      },
+      {
+        "ligand": "RAND3_lig",
+        "ligand_agi": "AT1G51500",
+        "receptor": "RAND3_rec",
+        "receptor_agi": "AT1G65490"
+      },
+      {
+        "ligand": "RAND4_lig",
+        "ligand_agi": "ATCG00020",
+        "receptor": "RAND4_rec",
+        "receptor_agi": "AT4G27870"
+      },
+      {
+        "ligand": "RAND5_lig",
+        "ligand_agi": "ATCG00490",
+        "receptor": "RAND5_rec",
+        "receptor_agi": "AT3G41768"
+      }
+    ]
+  }
+}

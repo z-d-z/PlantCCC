@@ -1,0 +1,16 @@
+role,label,I,pair,gamma2
+true_lr,mesophyll_to_epidermis_medium,0.36352477122261323,EPFL9→ER,0.4
+true_lr,vascular_intra_short,0.21049035982573194,CLE41→PXY,0.45
+true_lr,guard_to_epidermis_short,0.30291748814829844,CLE9→BAM1,0.35
+true_lr,vascular_intra_medium,0.18700737729592884,CIF2→SGN3,0.4
+true_lr,long_range_systemic,0.26890961538990377,PSK4→PSKR1,0.3
+confounder,colocalization_confounder,0.44380191225931265,CONF_UE1_lig→CONF_UE1_rec,0.0
+confounder,colocalization_confounder,0.30481300577641096,CONF_SM1_lig→CONF_SM1_rec,0.0
+confounder,colocalization_confounder,0.21592350731859217,CONF_LE1_lig→CONF_LE1_rec,0.0
+confounder,colocalization_confounder,0.17233491010723712,CONF_GC1_lig→CONF_GC1_rec,0.0
+confounder,colocalization_confounder,0.4416502449438591,CONF_X1_lig→CONF_X1_rec,0.0
+random,uniform_random,0.15985106701302448,RAND1_lig→RAND1_rec,0.0
+random,uniform_random,0.1621610935747407,RAND2_lig→RAND2_rec,0.0
+random,uniform_random,0.1417314524780312,RAND3_lig→RAND3_rec,0.0
+random,uniform_random,0.2549568186969942,RAND4_lig→RAND4_rec,0.0
+random,uniform_random,0.20850805488438673,RAND5_lig→RAND5_rec,0.0
